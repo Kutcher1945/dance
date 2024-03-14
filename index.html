@@ -206,5 +206,17 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          var arrow = document.getElementById('arrow');
+          var aboutUsSection = document.getElementById('about-us');
+  
+          arrow.addEventListener('click', function() {
+              aboutUsSection.scrollIntoView({ behavior: 'smooth' });
+          });
+      });
+  </script>
+
+    
   </body>
 </html>
