@@ -18,18 +18,15 @@
 
   <body>
     <div id="nav">
-      <img
-        src="https://nuance-dance.com/assets/images/nds-logo15-451x451.png"
-        alt=""
-      />
-      <h4>Уроки танцев</h4>
-      <h4>Мастер-классы</h4>
-      <h4>Танцевальные стили</h4>
-      <h4>Кафе</h4>
-      <h4>События</h4>
-    </div>
-    <div id="cursor"></div>
-    <div id="cursor-blur"></div>
+      <img src="https://nuance-dance.com/assets/images/nds-logo15-451x451.png" alt="">
+      <h4 onclick="scrollToSection('page1')">ГЛАВНАЯ</h4>
+      <h4 onclick="scrollToSection('page2')">О НАС</h4>
+      <h4 onclick="scrollToSection('page3')">Описание студии</h4>
+      <h4 onclick="scrollToSection('page4')">ЧТО ВАС ОЖИДАЕТ</h4>
+      <h4 onclick="scrollToSection('footer')">КОНТАКТНАЯ ИНФОРМАЦИЯ</h4>
+  </div>
+  <div id="cursor"></div>
+  <div id="cursor-blur"></div>
 
     <video autoplay loop muted src="./Assests/hero.mp4"></video>
 
@@ -133,7 +130,7 @@
         />
       </div>
       <div id="page4">
-        <h1>ЧТО ВЫ ЖДЁТЕ?</h1>
+        <h1>ЧТО ВАС ОЖИДАЕТ?</h1>
         <div class="elem">
           <h2>Современные танцы</h2>
           <img
@@ -167,21 +164,19 @@
             alt=""
           />
         </div>
-        <div id="f2">
-          <h3>Уроки танцев</h3>
-          <h3>Мастер-классы</h3>
-          <h3>Танцевальные стили</h3>
-        </div>
         <div id="f3">
-          <h3>Кафе</h3>
-          <h3>События</h3>
-          <h3>Свяжитесь с нами</h3>
-        </div>
+          <!-- Embed Google Map with coordinates for Almaty -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2857.210488896089!2d76.8756809156179!3d43.22991117913794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDIzJzI4LjciTiA3NsKwNTInNDguNSJF!5e0!3m2!1sen!2s!4v1649959239055!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>          
         <div id="f4">
           <h4>
-            Алматы, Казахстан<br />
+            АДРЕС: Алматы, Казахстан<br />
+          </h4>
+          <h4>
             Телефон: 8 (727) 123-45-67<br />
-            Получить указания<br />
+          </h4>
+          <h4>
+            EMAIL: dance.studio24@gmail.com<br />
           </h4>
         </div>
       </div>
@@ -209,8 +204,14 @@
               aboutUsSection.scrollIntoView({ behavior: 'smooth' });
           });
       });
-  </script>
-
-    
+    </script>
+    <script>
+      function scrollToSection(sectionId) {
+          var section = document.getElementById(sectionId);
+          if (section) {
+              section.scrollIntoView({ behavior: 'smooth' });
+          }
+      }
+    </script>  
   </body>
 </html>
